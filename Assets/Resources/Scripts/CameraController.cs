@@ -8,14 +8,14 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        // Initialize with the third-person camera active
+        //make thirdPerson camera active
         thirdPersonCamera.enabled = true;
         topDownCamera.enabled = false;
     }
 
     void Update()
     {
-        // Check for the 'C' key press to toggle the camera view
+        //check for input 'c'  to toggle the camera view
         if (Input.GetKeyDown(KeyCode.C))
         {
             ToggleCamera();
@@ -24,10 +24,10 @@ public class CameraController : MonoBehaviour
 
     void ToggleCamera()
     {
-        // Toggle the boolean
+        //toggle camera
         isThirdPerson = !isThirdPerson;
 
-        // Enable the appropriate camera based on the current state
+        //enable appropriate camera
         thirdPersonCamera.enabled = isThirdPerson;
         topDownCamera.enabled = !isThirdPerson;
     }
